@@ -1,180 +1,194 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Recours antenne Saint-Pargoire</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--ink:#1a1a2e;--paper:#faf8f4;--gold:#8b6914;--gold-l:#c49b2a;--gold-bg:#f5ecd4;--blue:#1e3a5f;--gray:#6b7280;--border:#d4c9b0}
-body{font-family:-apple-system,system-ui,sans-serif;background:linear-gradient(180deg,#e8e0d0,#d4cbb8);min-height:100vh;color:var(--ink)}
+body{font-family:-apple-system,system-ui,sans-serif;background:linear-gradient(180deg,#e8e0d0,#d4cbb8);min-height:100vh;color:#1a1a2e}
 .c{max-width:680px;margin:0 auto;padding:20px 16px 60px}
-.hd{text-align:center;padding:28px 20px;background:var(--blue);color:#fff;border-radius:12px 12px 0 0}
-.hd h1{font-family:Georgia,serif;font-size:clamp(22px,5vw,32px);font-weight:700;margin:8px 0}
+.hd{text-align:center;padding:28px 20px;background:#1e3a5f;color:#fff;border-radius:12px 12px 0 0}
+.hd h1{font-family:Georgia,serif;font-size:clamp(22px,5vw,32px);margin:8px 0}
 .hd p{font-size:13px;opacity:.75;max-width:440px;margin:0 auto;line-height:1.5}
 .badge{font-size:10px;letter-spacing:3px;text-transform:uppercase;background:rgba(255,255,255,.12);padding:4px 14px;border-radius:20px;display:inline-block}
-.cd{background:var(--paper);border:1px solid var(--border);border-radius:0 0 12px 12px;padding:24px}
+.cd{background:#faf8f4;border:1px solid #d4c9b0;border-radius:0 0 12px 12px;padding:24px}
 .fg{margin-bottom:16px}
-.fg label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--blue);margin-bottom:5px}
-.fg input{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:6px;font-size:15px;font-family:Georgia,serif;color:var(--ink);background:#fff}
-.fg input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(139,105,20,.1)}
-.req::after{content:' *';color:#8b2020}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all .2s;width:100%}
-.bp{background:var(--gold);color:#fff}.bp:hover{background:var(--gold-l)}.bp:disabled{background:#c4bba8;cursor:not-allowed}
-.bs{background:#fff;color:var(--blue);border:1.5px solid var(--border)}.bs:hover{background:#f0ece4}
-.br{display:flex;gap:10px;margin-top:8px}.br .btn{flex:1}
+.fg label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#1e3a5f;margin-bottom:5px}
+.fg label .r{color:#8b2020}
+.fg input{width:100%;padding:10px 12px;border:1.5px solid #d4c9b0;border-radius:6px;font-size:15px;font-family:Georgia,serif;background:#fff}
+.fg input:focus{outline:none;border-color:#8b6914;box-shadow:0 0 0 3px rgba(139,105,20,.1)}
+.btn{display:flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;width:100%;transition:all .2s}
+.bp{background:#8b6914;color:#fff}.bp:hover{background:#c49b2a}
+.bs{background:#fff;color:#1e3a5f;border:1.5px solid #d4c9b0;flex:1}.bs:hover{background:#f0ece4}
+.br{display:flex;gap:10px;margin-top:10px}
 .ib{padding:14px 16px;border-radius:8px;margin-bottom:16px;font-size:13px;line-height:1.6}
-.ib.g{background:var(--gold-bg);border-left:3px solid var(--gold)}
-.ib.b{background:#e8f0f8;border-left:3px solid #2d5a88}
-.ib.gr{background:#e8f5e8;border-left:3px solid #2d7a2d}
-.ib .t{font-weight:700}
+.ig{background:#f5ecd4;border-left:3px solid #8b6914}
+.ib2{background:#e8f0f8;border-left:3px solid #2d5a88}
+.igr{background:#e8f5e8;border-left:3px solid #2d7a2d}
+.ib b,.t{font-weight:700}
 .st{width:100%;border-collapse:collapse;margin-bottom:16px}
 .st td{padding:8px 10px;font-size:13px;border-bottom:1px solid #eae5da}
-.st td:first-child{font-weight:600;color:var(--blue);width:110px}
-.pa{background:#fff;border:1px solid var(--border);border-radius:8px;padding:20px;font-family:Georgia,serif;font-size:11px;line-height:1.6;color:#222;white-space:pre-wrap;word-wrap:break-word;max-height:500px;overflow-y:auto}
-.sec{display:none}.sec.on{display:block}
-.ml{list-style:none;counter-reset:m}.ml li{counter-increment:m;padding:5px 0 5px 28px;position:relative;font-size:12px;line-height:1.5}
-.ml li::before{content:counter(m);position:absolute;left:0;width:20px;height:20px;background:var(--blue);color:#fff;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;top:5px}
-.dots{display:flex;justify-content:center;gap:6px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--border)}
-.dot{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
-.dot.a{background:var(--gold);color:#fff}.dot.d{background:var(--gold-l);color:#fff}.dot.p{background:#e5e0d5;color:var(--gray)}
-@media print{body{background:#fff;margin:0}.c{max-width:100%;padding:0}.hd{display:none!important}.cd{border:none;padding:0;background:#fff}.dots,.br,.ib,.np,.btn,.fg,.ml{display:none!important}#s1,#s2{display:none!important}#s3{display:block!important}.pa{border:none;max-height:none;padding:1.5cm;font-size:10pt;box-shadow:none;overflow:visible}}
-</style>
-</head>
-<body>
+.st td:first-child{font-weight:600;color:#1e3a5f;width:110px}
+.pa{background:#fff;border:1px solid #d4c9b0;border-radius:8px;padding:20px;font-family:Georgia,serif;font-size:11px;line-height:1.6;color:#222;white-space:pre-wrap;word-wrap:break-word;max-height:500px;overflow-y:auto}
+.hide{display:none}
+.ml{list-style:none;counter-reset:m;padding:0}.ml li{counter-increment:m;padding:5px 0 5px 28px;position:relative;font-size:12px;line-height:1.5}
+.ml li::before{content:counter(m);position:absolute;left:0;width:20px;height:20px;background:#1e3a5f;color:#fff;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;top:5px}
+.np{} 
+@media print{body{background:#fff;margin:0}.c{max-width:100%;padding:0}.hd,.np,.btn,.fg,.ml,.ib,.br{display:none!important}.cd{border:none;padding:0;background:#fff}.pa{border:none;max-height:none;padding:1.5cm;font-size:10pt;overflow:visible}#step1,#step2{display:none!important}#step3{display:block!important}}
+</style></head><body>
 <div class="c">
 <div class="hd">
 <div class="badge">Saint-Pargoire &middot; DP 034 281 26 00004</div>
-<h1>Recours contre l&rsquo;antenne relais</h1>
-<p>G&eacute;n&eacute;rez votre recours gracieux personnalis&eacute;. 9 arguments juridiques int&eacute;gr&eacute;s automatiquement.</p>
+<h1>Recours contre l&#8217;antenne relais</h1>
+<p>G&eacute;n&eacute;rez votre recours gracieux personnalis&eacute;. 9 arguments juridiques int&eacute;gr&eacute;s.</p>
 </div>
 <div class="cd">
-<div class="dots np" id="dots">
-<div class="dot a" id="d1">1</div>
-<div class="dot p" id="d2">2</div>
-<div class="dot p" id="d3">3</div>
-</div>
 
-<div class="sec on" id="s1">
-<div class="fg"><label class="req">Nom et Pr&eacute;nom</label><input id="nom" placeholder="ex : Jean DUPONT"></div>
-<div class="fg"><label class="req">Adresse</label><input id="adr" placeholder="ex : 45, chemin des Vignes"></div>
+<!-- STEP 1 : FORMULAIRE -->
+<div id="step1">
+<div class="fg"><label>NOM ET PR&Eacute;NOM <span class="r">*</span></label><input id="nom" placeholder="ex : Jean DUPONT"></div>
+<div class="fg"><label>ADRESSE <span class="r">*</span></label><input id="adr" placeholder="ex : 45 chemin des Vignes"></div>
 <div style="display:flex;gap:10px">
-<div class="fg" style="width:130px"><label class="req">Code postal</label><input id="cp" placeholder="34230"></div>
-<div class="fg" style="flex:1"><label class="req">Ville</label><input id="vil" placeholder="ex : Campagnan"></div>
+<div class="fg" style="width:130px"><label>CODE POSTAL <span class="r">*</span></label><input id="cp" placeholder="34230"></div>
+<div class="fg" style="flex:1"><label>VILLE <span class="r">*</span></label><input id="vil" placeholder="Campagnan"></div>
 </div>
-<div class="fg"><label>T&eacute;l&eacute;phone</label><input id="tel" placeholder="06 00 00 00 00"></div>
-<div class="fg"><label>Courriel</label><input id="eml" placeholder="votre@email.fr"></div>
-<div class="ib g">
+<div class="fg"><label>T&Eacute;L&Eacute;PHONE</label><input id="tel" placeholder="06 00 00 00 00"></div>
+<div class="fg"><label>COURRIEL</label><input id="eml" placeholder="votre@email.fr"></div>
+<div class="ib ig">
 <div class="t">&#9878; 9 arguments juridiques int&eacute;gr&eacute;s :</div>
 <ol class="ml">
-<li>Erreur de proc&eacute;dure : permis de construire requis, pas une simple DP (emprise &gt; 20 m&sup2;)</li>
+<li>Erreur de proc&eacute;dure : permis de construire requis (emprise &gt; 20 m&sup2;)</li>
 <li>Zone Uep Racadies d&eacute;di&eacute;e aux antennes ignor&eacute;e</li>
-<li>Covisibilit&eacute; avec l&rsquo;&eacute;glise class&eacute;e Monument Historique (1862)</li>
-<li>D&eacute;faut d&rsquo;autorisation du propri&eacute;taire du terrain</li>
-<li>M&eacute;connaissance des conditions d&rsquo;autorisation en zone A du PLU</li>
-<li>Atteinte au paysage viticole (art. R.111-27 du Code de l&rsquo;urbanisme)</li>
-<li>Absence d&rsquo;examen au cas par cas &ndash; &eacute;valuation environnementale (rubrique 39a)</li>
+<li>Covisibilit&eacute; avec l&#8217;&eacute;glise class&eacute;e MH (1862)</li>
+<li>D&eacute;faut d&#8217;autorisation du propri&eacute;taire du terrain</li>
+<li>M&eacute;connaissance des conditions zone A du PLU</li>
+<li>Atteinte au paysage viticole (art. R.111-27 CU)</li>
+<li>Absence d&#8217;examen au cas par cas (rubrique 39a, art. R.122-2 C. env.)</li>
 <li>Insuffisance du dossier de d&eacute;claration pr&eacute;alable</li>
-<li>Irr&eacute;gularit&eacute; de l&rsquo;affichage sur le terrain</li>
+<li>Irr&eacute;gularit&eacute; de l&#8217;affichage sur le terrain</li>
 </ol></div>
-<button class="btn bp" id="b1" onclick="if(v('nom')&&v('adr')&&v('cp')&&v('vil')){go(2)}else{alert('Veuillez remplir les champs obligatoires (Nom, Adresse, Code postal, Ville)');}">Continuer &rarr;</button>
+<button class="btn bp" onclick="etape2()">Continuer &#8594;</button>
 </div>
 
-<div class="sec" id="s2">
-<h3 style="font-family:Georgia,serif;font-size:18px;color:var(--blue);margin-bottom:14px">V&eacute;rifiez vos informations</h3>
+<!-- STEP 2 : VERIFICATION -->
+<div id="step2" class="hide">
+<h3 style="font-family:Georgia,serif;font-size:18px;color:#1e3a5f;margin-bottom:14px">V&eacute;rifiez vos informations</h3>
 <table class="st" id="tb"></table>
-<div class="ib b">
-<div class="t">&#9993; 3 envois &agrave; effectuer :</div>
-<b>1.</b> LRAR au Maire de Saint-Pargoire<br>
-<b>2.</b> Copie LRAR &agrave; Phoenix France Infrastructures, 4 rue de Marivaux, 75002 Paris<br>
+<div class="ib ib2">
+<div class="t">&#9993; Envois &agrave; effectuer :</div>
+<b>1.</b> LRAR au Maire de Saint-Pargoire &middot; Place de la Mairie &middot; 34230<br>
+<b>2.</b> Copie LRAR &agrave; Phoenix France Infrastructures &middot; 4 rue de Marivaux &middot; 75002 Paris<br>
 <b>3.</b> Conserver les accus&eacute;s de r&eacute;ception</div>
-<div class="br"><button class="btn bs" onclick="go(1)">&larr; Modifier</button><button class="btn bp" onclick="gen()">G&eacute;n&eacute;rer &rarr;</button></div>
+<div class="br"><button class="btn bs" onclick="etape1()">&larr; Modifier</button><button class="btn bp" onclick="generer()">G&eacute;n&eacute;rer le recours &#8594;</button></div>
 </div>
 
-<div class="sec" id="s3">
-<div class="ib gr np"><div class="t">&#10004; Votre recours est pr&ecirc;t !</div>Imprimez <b>sans en-t&ecirc;te ni pied de page</b>, signez &agrave; la main, envoyez en LRAR.</div>
-<div class="br np" style="margin-bottom:14px"><button class="btn bs" onclick="cop()">&#128203; Copier</button><button class="btn bp" onclick="window.print()">&#128424; Imprimer / PDF</button></div>
-<div class="pa" id="out"></div>
+<!-- STEP 3 : RESULTAT -->
+<div id="step3" class="hide">
+<div class="ib igr np"><div class="t">&#10004; Votre recours est pr&ecirc;t !</div>Imprimez <b>sans en-t&ecirc;te</b>, signez &agrave; la main, envoyez en LRAR.</div>
+<div class="br np"><button class="btn bs" onclick="copier()">&#128203; Copier le texte</button><button class="btn bp" onclick="window.print()">&#128424; Imprimer / PDF</button></div>
+<div class="pa" id="out" style="margin-top:14px"></div>
 
-<div class="ib b np" style="margin-top:16px">
+<div class="ib ib2 np" style="margin-top:16px">
 <div class="t" style="font-size:15px;margin-bottom:8px">MARCHE &Agrave; SUIVRE :</div>
 <div style="font-size:14px;line-height:2">
-<b>1. IMPRIMER</b> le recours ci-dessus <b>sans en-t&ecirc;te ni pied de page</b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&rarr; Dans les options d&rsquo;impression, d&eacute;cocher &laquo; En-t&ecirc;tes et pieds de page &raquo;<br><br>
-<b>2. SIGNER &Agrave; LA MAIN</b> en bas du document<br><br>
-<b>3. ENVOYER EN LRAR</b> (Lettre Recommand&eacute;e avec AR) &agrave; :<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>M. le Maire de Saint-Pargoire</b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Place de la Mairie<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34230 SAINT-PARGOIRE<br><br>
-<b>4. ENVOYER UNE COPIE EN LRAR</b> &agrave; :<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>Phoenix France Infrastructures</b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4, rue de Marivaux<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;75002 PARIS<br><br>
-<b>5. CONSERVER</b> les accus&eacute;s de r&eacute;ception<br>
+<b>1. IMPRIMER</b> sans en-t&ecirc;te ni pied de page<br>
+<b>2. SIGNER &Agrave; LA MAIN</b> en bas du document<br>
+<b>3. LRAR</b> &agrave; : <b>M. le Maire de Saint-Pargoire</b>, Place de la Mairie, 34230<br>
+<b>4. COPIE LRAR</b> &agrave; : <b>Phoenix France Infrastructures</b>, 4 rue de Marivaux, 75002 Paris<br>
+<b>5. CONSERVER</b> les accus&eacute;s de r&eacute;ception
 </div>
 <div style="font-size:12px;color:#666;border-top:1px solid #ccc;padding-top:8px;margin-top:4px">
-<b>D&eacute;lai :</b> Le panneau d&rsquo;affichage &eacute;tant masqu&eacute; par la v&eacute;g&eacute;tation, le d&eacute;lai de recours (2 mois) n&rsquo;a pas valablement commenc&eacute;. Toutefois, n&rsquo;attendez pas &mdash; envoyez d&egrave;s que possible.<br>
-<b>Co&ucirc;t :</b> environ 2 x 6&euro; (LRAR) = ~12&euro;
-</div>
-</div>
+<b>D&eacute;lai :</b> Le panneau &eacute;tant masqu&eacute;, le d&eacute;lai de recours n&#8217;a pas commenc&eacute;. N&#8217;attendez pas, envoyez d&egrave;s que possible.<br>
+<b>Co&ucirc;t :</b> ~12&euro; (2 LRAR)</div></div>
 
-<div class="ib g np" style="margin-top:16px">
-<div class="t" style="font-size:15px;margin-bottom:8px">BONUS : INFORMER LES &Eacute;LUS (courrier simple)</div>
+<div class="ib ig np" style="margin-top:16px">
+<div class="t" style="font-size:15px;margin-bottom:8px">INFORMER LES &Eacute;LUS (courrier simple)</div>
 <div style="font-size:13px;line-height:1.8">
-En compl&eacute;ment, envoyez un <b>courrier simple ou email</b> aux &eacute;lus :<br><br>
-<b>Mairie de Saint-Pargoire :</b><br>
-&nbsp;&nbsp;Maire : M. Jean-Luc DARMANIN<br>
-&nbsp;&nbsp;Place de la Mairie, 34230 Saint-Pargoire<br>
-&nbsp;&nbsp;04 67 98 70 01 &middot; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dab7bbb3a8b3bf9aacb3b6b6bff7a9bbb3b4aeaabba8bdb5b3a8bff4b9b5b7">[email&#160;protected]</a><br><br>
-<b>Mairie de Campagnan :</b><br>
-&nbsp;&nbsp;1, rue des &Eacute;coles, 34230 Campagnan<br>
-&nbsp;&nbsp;04 67 25 04 32<br><br>
-<b>CC Vall&eacute;e de l&rsquo;H&eacute;rault :</b><br>
-&nbsp;&nbsp;2, Parc d&rsquo;Activit&eacute;s de Camalc&eacute;, 34150 Gignac<br>
-&nbsp;&nbsp;04 67 57 04 50<br><br>
-<b>Trouver les &eacute;lus de votre commune :</b><br>
-&nbsp;&nbsp;&rarr; <a href="https://www.annuaire-mairie.fr/mairie-saint-pargoire.html" target="_blank" style="color:var(--blue)">annuaire-mairie.fr/saint-pargoire</a><br>
-&nbsp;&nbsp;&rarr; <a href="https://www.annuaire-mairie.fr/mairie-campagnan.html" target="_blank" style="color:var(--blue)">annuaire-mairie.fr/campagnan</a><br>
-&nbsp;&nbsp;&rarr; <a href="https://politique.pappers.fr" target="_blank" style="color:var(--blue)">politique.pappers.fr</a> (toutes communes)
-</div>
-</div>
-
-<div class="br np" style="margin-top:14px"><button class="btn bs" onclick="go(1)">&#8634; Nouveau recours</button></div>
-</div>
+<b>Mairie de Saint-Pargoire</b> : M. Jean-Luc DARMANIN<br>
+&nbsp;&nbsp;Place de la Mairie, 34230 &middot; 04 67 98 70 01 &middot; mairie@ville-saintpargoire.com<br>
+<b>Mairie de Campagnan</b> : 1 rue des &Eacute;coles, 34230 &middot; 04 67 25 04 32<br>
+<b>CC Vall&eacute;e de l&#8217;H&eacute;rault</b> : 2 Parc de Camalc&eacute;, 34150 Gignac &middot; 04 67 57 04 50<br><br>
+&#8594; <a href="https://politique.pappers.fr" target="_blank" style="color:#1e3a5f">politique.pappers.fr</a> (trouver les &eacute;lus de n&#8217;importe quelle commune)
 </div></div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-var M=["janvier","f\u00e9vrier","mars","avril","mai","juin","juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"];
-function td(){var d=new Date();return d.getDate()+" "+M[d.getMonth()]+" "+d.getFullYear();}
-function v(i){return document.getElementById(i).value.trim();}
-function ck(){document.getElementById("b1").disabled=!(v("nom")&&v("adr")&&v("cp")&&v("vil"));}
-var ids=["nom","adr","cp","vil","tel","eml"];
-for(var i=0;i<ids.length;i++){document.getElementById(ids[i]).addEventListener("input",ck);document.getElementById(ids[i]).addEventListener("change",ck);document.getElementById(ids[i]).addEventListener("paste",function(){setTimeout(ck,100);});}
-setInterval(ck,1000);
+<div class="br np" style="margin-top:14px"><button class="btn bs" onclick="etape1()">&#8634; Nouveau recours</button></div>
+</div>
 
-function go(n){
-for(var i=1;i<=3;i++){
-document.getElementById("s"+i).className="sec"+(i===n?" on":"");
-document.getElementById("d"+i).className="dot "+(i<n?"d":i===n?"a":"p");
-}
-if(n===2){
-var r=[["Requ\u00e9rant",v("nom")],["Adresse",v("adr")+", "+v("cp")+" "+v("vil")]];
-if(v("tel"))r.push(["T\u00e9l.",v("tel")]);if(v("eml"))r.push(["Courriel",v("eml")]);
-r.push(["Date",td()]);
-var h="";for(var j=0;j<r.length;j++){h+="<tr><td>"+r[j][0]+"</td><td>"+r[j][1]+"</td></tr>";}
-document.getElementById("tb").innerHTML=h;
-}
-window.scrollTo({top:0,behavior:"smooth"});
-}
+</div></div>
 
-function gen(){
-var n=v("nom"),a=v("adr"),c=v("cp"),vi=v("vil"),t=v("tel"),e=v("eml"),dt=td();
-var txt=n+"\n"+a+"\n"+c+" "+vi;
-if(t)txt+="\nT\u00e9l. : "+t;
-if(e)txt+="\nCourriel : "+e;
-txt+="\n\n\n                                              Monsieur le Maire de Saint-Pargoire\n                                              Place de la Mairie\n                                              34230 SAINT-PARGOIRE\n\n                                              \u00c0 "+vi+", le "+dt+"\n\nLettre recommand\u00e9e avec accus\u00e9 de r\u00e9ception\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nObjet : Recours gracieux contre la d\u00e9cision de non-opposition\n\u00e0 d\u00e9claration pr\u00e9alable n\u00b0 DP 034 281 26 00004\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nMonsieur le Maire,\n\nJ\u2019ai l\u2019honneur de former un recours gracieux \u00e0 l\u2019encontre de la d\u00e9cision de non-opposition \u00e0 la d\u00e9claration pr\u00e9alable n\u00b0 DP 034 281 26 00004, portant sur l\u2019installation d\u2019un treillis en acier galvanis\u00e9 d\u2019une hauteur de 24,30 m\u00e8tres, accompagn\u00e9 d\u2019\u00e9quipements techniques (18 coffrets, massif de fondation de 4,60 \u00d7 4,60 m, cl\u00f4ture grilllag\u00e9e de 7,00 \u00d7 5,00 m, dalle b\u00e9ton, compteur ENEDIS), sur la parcelle cadastr\u00e9e section AE n\u00b0 202, lieu-dit Camp Fiseaux, commune de Saint-Pargoire.\nI. EXPOS\u00c9 DES FAITS\n\nLe 16 f\u00e9vrier 2026, la soci\u00e9t\u00e9 PHOENIX FRANCE INFRASTRUCTURES (SAS), sp\u00e9cialis\u00e9e dans la construction et l\u2019exploitation de structures de t\u00e9l\u00e9communication, a d\u00e9pos\u00e9 cette d\u00e9claration pr\u00e9alable sur la parcelle AE 202 (10 470 m\u00b2), lieu-dit Camp Fiseaux. Le service instructeur a relev\u00e9 la non-conformit\u00e9 du plan de masse au PLU (recul de 5 m non respect\u00e9).\n\nLe projet se situe en zone A (agricole) du PLU approuv\u00e9 le 13 juin 2024, dans un paysage viticole ouvert en covisibilit\u00e9 directe avec l\u2019\u00e9glise Saint-Pargoire, \u00e9difice gothique du XIIIe si\u00e8cle class\u00e9 monument historique depuis 1862 (clocher de 32 m\u00e8tres).\nII. DISCUSSION\nMOYEN N\u00b0 1 (PRINCIPAL) \u2013 ERREUR DE PROC\u00c9DURE : PERMIS DE CONSTRUIRE REQUIS\n\nL\u2019article R.421-9 j) du Code de l\u2019urbanisme soumet \u00e0 d\u00e9claration pr\u00e9alable les antennes-relais dont l\u2019emprise au sol des locaux techniques est sup\u00e9rieure \u00e0 5 m\u00b2 et inf\u00e9rieure ou \u00e9gale \u00e0 20 m\u00b2. Au-del\u00e0 de 20 m\u00b2, un permis de construire est requis (art. R.421-1). Le plan de masse r\u00e9v\u00e8le une emprise technique consid\u00e9rable : cl\u00f4ture grilllag\u00e9e de 7,00 \u00d7 5,00 m (35 m\u00b2), massif de fondation de 4,60 \u00d7 4,60 m (21,16 m\u00b2), dalle b\u00e9ton, 18 coffrets techniques, 2 armoires superpos\u00e9es, compteur ENEDIS. L\u2019emprise au sol cumul\u00e9e d\u00e9passe manifestement 20 m\u00b2. Le projet relevait donc du permis de construire.\nMOYEN N\u00b0 2 \u2013 ZONE UEP D\u00c9DI\u00c9E AUX ANTENNES IGNOR\u00c9E\n\nLe PLU a institu\u00e9 des zones Uep (9,01 ha) d\u00e9di\u00e9es aux \u00e9quipements. Le r\u00e8glement (p. 73) identifie express\u00e9ment : \u00ab Uep Racadies, secteur d\u2019implantation de la station d\u2019\u00e9puration et d\u2019antennes de t\u00e9l\u00e9communication \u00bb. En zone Uep, les \u00e9quipements techniques sont autoris\u00e9s sans condition. En zone A, sous condition de ne pas porter atteinte aux paysages. Il n\u2019est pas d\u00e9montr\u00e9 que l\u2019implantation en zone Uep serait impossible.\nMOYEN N\u00b0 3 \u2013 COVISIBILIT\u00c9 AVEC L\u2019\u00c9GLISE CLASS\u00c9E MONUMENT HISTORIQUE\n\nL\u2019\u00e9glise Saint-Pargoire (r\u00e9f. M\u00e9rim\u00e9e PA00103704), class\u00e9e MH depuis 1862, poss\u00e8de un clocher de 32 m\u00e8tres. La parcelle AE 202 se situe \u00e0 environ 600 m\u00e8tres. Le clocher est directement visible depuis le site. Art. L.621-32 du Code du patrimoine (consultation ABF) et R.111-27 CU (perspectives monumentales). Une structure de 24,30 m en covisibilit\u00e9 directe avec le clocher porte atteinte aux perspectives monumentales.\nMOYEN N\u00b0 4 \u2013 D\u00c9FAUT D\u2019AUTORISATION DU PROPRI\u00c9TAIRE DU TERRAIN\n\nArt. R.423-1 CU : le demandeur doit justifier d\u2019un titre l\u2019habilitant \u00e0 construire. PHOENIX FRANCE INFRASTRUCTURES n\u2019est pas propri\u00e9taire de la parcelle AE 202. En l\u2019absence de bail ou convention d\u2019occupation, l\u2019attestation CERFA est susceptible d\u2019\u00eatre inexacte.\nMOYEN N\u00b0 5 \u2013 M\u00c9CONNAISSANCE DES CONDITIONS EN ZONE A DU PLU\n\nLe r\u00e8glement zone A n\u2019autorise les \u00e9quipements techniques que s\u2019ils \u00ab ne portent pas atteinte \u00e0 la sauvegarde des espaces naturels et des paysages \u00bb. Une structure de 24,30 m dans un paysage viticole ouvert constitue une rupture d\u2019\u00e9chelle et une violation directe du r\u00e8glement.\nMOYEN N\u00b0 6 \u2013 VIOLATION DE L\u2019ARTICLE R.111-27 DU CODE DE L\u2019URBANISME\n\nPaysage caract\u00e9ris\u00e9 par une plaine viticole ouverte (d\u00e9crite dans le PLU comme \u00ab campagne-jardin vari\u00e9e et de grande qualit\u00e9 \u00bb), absence de construction comparable, clocher class\u00e9 MH dans le m\u00eame champ visuel. La structure de 24,30 m sera un \u00e9l\u00e9ment vertical dominant en rupture totale avec le paysage.\nMOYEN N\u00b0 7 \u2013 ABSENCE D\u2019EXAMEN AU CAS PAR CAS (\u00c9VALUATION ENVIRONNEMENTALE)\n\nLe projet s\u2019implante sur une unit\u00e9 fonci\u00e8re de 10 470 m\u00b2 (> seuil de 10 000 m\u00b2). Au titre de la rubrique 39 a) du tableau annex\u00e9 \u00e0 l\u2019article R.122-2 du Code de l\u2019environnement, le projet aurait d\u00fb faire l\u2019objet d\u2019un examen au cas par cas. L\u2019autorit\u00e9 administrative n\u2019a pas \u00e9t\u00e9 en mesure d\u2019appr\u00e9cier les incidences du projet.\nMOYEN N\u00b0 8 \u2013 INSUFFISANCE DU DOSSIER\n\n\u2013 Analyse paysag\u00e8re insuffisante \u00e0 moyenne et longue distance\n\u2013 Aucune \u00e9tude de covisibilit\u00e9 avec l\u2019\u00e9glise class\u00e9e MH\n\u2013 Aucune \u00e9tude de solutions alternatives (zone Uep Racadies)\n\u2013 Carences initiales relev\u00e9es par le service instructeur\n\nMOYEN SUBSIDIAIRE \u2013 IRR\u00c9GULARIT\u00c9 DE L\u2019AFFICHAGE\n\nLe panneau d\u2019affichage est masqu\u00e9 par la v\u00e9g\u00e9tation (cannes de Provence), rendant les mentions l\u00e9gales illisibles. Le d\u00e9lai de recours n\u2019a pas valablement commenc\u00e9 \u00e0 courir (art. R.424-15 CU).\nIII. CONCLUSION\n\nLa d\u00e9cision de non-opposition est entach\u00e9e de plusieurs ill\u00e9galit\u00e9s substantielles. Je vous demande de bien vouloir proc\u00e9der au retrait de cette d\u00e9cision dans un d\u00e9lai de deux mois. \u00c0 d\u00e9faut, je me r\u00e9serve la possibilit\u00e9 d\u2019un recours contentieux devant le tribunal administratif de Montpellier.\n\nConform\u00e9ment \u00e0 l\u2019article R.600-1 du Code de l\u2019urbanisme, copie du pr\u00e9sent recours est notifi\u00e9e ce jour au b\u00e9n\u00e9ficiaire.\n\nJe vous prie d\u2019agr\u00e9er, Monsieur le Maire, l\u2019expression de ma consid\u00e9ration distingu\u00e9e.\n\n"+n+"\n\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nCopies (art. R.600-1 CU) :\n\u2013 Maire de Saint-Pargoire (auteur)\n\u2013 PHOENIX FRANCE INFRASTRUCTURES, 4 rue de Marivaux, 75002 Paris\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500";
-document.getElementById("out").textContent=txt;go(3);
+<script>
+function V(id){return document.getElementById(id).value.trim();}
+function show(id){document.getElementById(id).className="";}
+function hide(id){document.getElementById(id).className="hide";}
+
+var MOIS=["janvier","f\u00e9vrier","mars","avril","mai","juin","juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"];
+function dateJour(){var d=new Date();return d.getDate()+" "+MOIS[d.getMonth()]+" "+d.getFullYear();}
+
+function etape1(){hide("step2");hide("step3");show("step1");window.scrollTo(0,0);}
+
+function etape2(){
+  var n=V("nom"),a=V("adr"),cp=V("cp"),vi=V("vil");
+  if(!n||!a||!cp||!vi){alert("Veuillez remplir les champs obligatoires (Nom, Adresse, Code postal, Ville).");return;}
+  hide("step1");hide("step3");show("step2");
+  var rows=[["Requ\u00e9rant",n],["Adresse",a+", "+cp+" "+vi]];
+  if(V("tel"))rows.push(["T\u00e9l.",V("tel")]);
+  if(V("eml"))rows.push(["Courriel",V("eml")]);
+  rows.push(["Date",dateJour()]);
+  var h="";for(var i=0;i<rows.length;i++)h+="<tr><td>"+rows[i][0]+"</td><td>"+rows[i][1]+"</td></tr>";
+  document.getElementById("tb").innerHTML=h;
+  window.scrollTo(0,0);
 }
 
-function cop(){
-var t=docume
+function generer(){
+  var n=V("nom"),a=V("adr"),cp=V("cp"),vi=V("vil"),t=V("tel"),e=V("eml"),dt=dateJour();
+  var L="\n", LL="\n\n";
+  var txt=n+L+a+L+cp+" "+vi;
+  if(t)txt+=L+"T\u00e9l. : "+t;
+  if(e)txt+=L+"Courriel : "+e;
+  txt+=LL+"Monsieur le Maire de Saint-Pargoire"+L+"Place de la Mairie"+L+"34230 SAINT-PARGOIRE"+LL;
+  txt+="\u00c0 "+vi+", le "+dt+LL;
+  txt+="Lettre recommand\u00e9e avec accus\u00e9 de r\u00e9ception"+LL;
+  txt+="\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"+L;
+  txt+="Objet : Recours gracieux contre la d\u00e9cision de non-opposition \u00e0 d\u00e9claration pr\u00e9alable n\u00b0 DP 034 281 26 00004"+L;
+  txt+="\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"+LL;
+  txt+="Monsieur le Maire,"+LL;
+  txt+="J\u2019ai l\u2019honneur de former un recours gracieux \u00e0 l\u2019encontre de la d\u00e9cision de non-opposition \u00e0 la d\u00e9claration pr\u00e9alable n\u00b0 DP 034 281 26 00004, portant sur l\u2019installation d\u2019un treillis en acier galvanis\u00e9 de 24,30 m\u00e8tres, accompagn\u00e9 d\u2019\u00e9quipements techniques, sur la parcelle AE 202, lieu-dit Camp Fiseaux, commune de Saint-Pargoire."+LL;
+  txt+="I. EXPOS\u00c9 DES FAITS"+LL;
+  txt+="Le 16 f\u00e9vrier 2026, PHOENIX FRANCE INFRASTRUCTURES (SAS) a d\u00e9pos\u00e9 cette DP sur la parcelle AE 202 (10 470 m\u00b2), lieu-dit Camp Fiseaux. Le service instructeur a relev\u00e9 la non-conformit\u00e9 du plan de masse (recul 5 m non respect\u00e9). Le projet se situe en zone A du PLU approuv\u00e9 le 13 juin 2024, en covisibilit\u00e9 directe avec l\u2019\u00e9glise class\u00e9e MH depuis 1862 (clocher 32 m)."+LL;
+  txt+="II. DISCUSSION"+LL;
+  txt+="MOYEN N\u00b0 1 \u2013 PERMIS DE CONSTRUIRE REQUIS"+L;
+  txt+="L\u2019art. R.421-9 j) CU soumet \u00e0 DP les antennes dont l\u2019emprise des locaux techniques est entre 5 et 20 m\u00b2. Au-del\u00e0 de 20 m\u00b2, un PC est requis. Le plan de masse r\u00e9v\u00e8le : cl\u00f4ture 7\u00d75 m (35 m\u00b2), massif 4,60\u00d74,60 m (21 m\u00b2), dalle, 18 coffrets, armoires, compteur. L\u2019emprise d\u00e9passe 20 m\u00b2. Le projet relevait du permis de construire."+LL;
+  txt+="MOYEN N\u00b0 2 \u2013 ZONE UEP D\u00c9DI\u00c9E AUX ANTENNES IGNOR\u00c9E"+L;
+  txt+="Le PLU pr\u00e9voit la zone Uep Racadies (p. 73) : \u00ab secteur d\u2019implantation d\u2019antennes de t\u00e9l\u00e9communication \u00bb. En Uep, les \u00e9quipements sont autoris\u00e9s sans condition. En zone A, sous condition paysag\u00e8re. Erreur manifeste d\u2019appr\u00e9ciation."+LL;
+  txt+="MOYEN N\u00b0 3 \u2013 COVISIBILIT\u00c9 AVEC L\u2019\u00c9GLISE CLASS\u00c9E MH (1862)"+L;
+  txt+="L\u2019\u00e9glise (r\u00e9f. PA00103704), clocher 32 m, est \u00e0 ~600 m. Art. L.621-32 C. patrimoine (ABF) et R.111-27 CU (perspectives monumentales). Atteinte grave aux perspectives."+LL;
+  txt+="MOYEN N\u00b0 4 \u2013 D\u00c9FAUT D\u2019AUTORISATION DU PROPRI\u00c9TAIRE"+L;
+  txt+="Art. R.423-1 CU. Phoenix n\u2019est pas propri\u00e9taire. Aucun bail ni convention produit."+LL;
+  txt+="MOYEN N\u00b0 5 \u2013 M\u00c9CONNAISSANCE ZONE A DU PLU"+L;
+  txt+="Les \u00e9quipements ne sont autoris\u00e9s que s\u2019ils \u00ab ne portent pas atteinte aux paysages \u00bb. Rupture d\u2019\u00e9chelle manifeste."+LL;
+  txt+="MOYEN N\u00b0 6 \u2013 VIOLATION ART. R.111-27 CU"+L;
+  txt+="Plaine viticole ouverte (\u00ab campagne-jardin de grande qualit\u00e9 \u00bb), absence de construction comparable, clocher MH dans le m\u00eame champ visuel. \u00c9l\u00e9ment vertical dominant en rupture totale."+LL;
+  txt+="MOYEN N\u00b0 7 \u2013 ABSENCE D\u2019EXAMEN AU CAS PAR CAS"+L;
+  txt+="Parcelle de 10 470 m\u00b2 (> seuil 10 000 m\u00b2). Rubrique 39a) du tableau annex\u00e9 \u00e0 l\u2019art. R.122-2 C. environnement. Examen au cas par cas requis."+LL;
+  txt+="MOYEN N\u00b0 8 \u2013 INSUFFISANCE DU DOSSIER"+L;
+  txt+="\u2013 Analyse paysag\u00e8re insuffisante"+L+"\u2013 Aucune \u00e9tude de covisibilit\u00e9 MH"+L+"\u2013 Aucune \u00e9tude d\u2019alternatives (Uep Racadies)"+L+"\u2013 Carences relev\u00e9es par le service instructeur"+LL;
+  txt+="MOYEN SUBSIDIAIRE \u2013 IRRGULARIT\u00c9 DE L\u2019AFFICHAGE"+L;
+  txt+="Panneau masqu\u00e9 par la v\u00e9g\u00e9tation. Mentions illisibles. D\u00e9lai non d\u00e9clench\u00e9 (art. R.424-15 CU)."+LL;
+  txt+="III. CONCLUSION"+LL;
+  txt+="La d\u00e9cision est entach\u00e9e de plusieurs ill\u00e9galit\u00e9s substantielles. Je vous demande de proc\u00e9der au retrait dans un d\u00e9lai de deux mois. \u00c0 d\u00e9faut, recours contentieux devant le TA de Montpellier. Copie notifi\u00e9e au b\u00e9n\u00e9ficiaire (art. R.600-1 CU)."+LL;
+  txt+="Je vous prie d\u2019agr\u00e9er, Monsieur le Maire, l\u2019expression de ma consid\u00e9ration distingu\u00e9e."+LL;
+  txt+=n+LL;
+  txt+="\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"+L;
+  txt+="Copies (art. R.600-1 CU) :"+L+"\u2013 Maire de Saint-Pargoire (auteur)"+L+"\u2013 PHOENIX FRANCE INFRASTRUCTURES, 4 rue de Marivaux, 75002 Paris"+L;
+  txt+="\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500";
+  document.getElementById("out").textContent=txt;
+  hide("step1");hide("step2");show("step3");
+  window.scrollTo(0,0);
+}
+
+function copier(){
+  var t=document.getElementById("out").textContent;
+  if(navigator.clipboard){navigator.clipboard.writeText(t);}
+  else{var ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand("copy");document.body.removeChild(ta);}
+  alert("Texte copi\u00e9 dans le presse-papiers !");
+}
+</script>
+</body></html>
