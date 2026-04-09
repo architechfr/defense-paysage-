@@ -149,7 +149,8 @@ function td(){var d=new Date();return d.getDate()+" "+M[d.getMonth()]+" "+d.getF
 function v(i){return document.getElementById(i).value.trim();}
 function ck(){document.getElementById("b1").disabled=!(v("nom")&&v("adr")&&v("cp")&&v("vil"));}
 var ids=["nom","adr","cp","vil","tel","eml"];
-for(var i=0;i<ids.length;i++){document.getElementById(ids[i]).addEventListener("input",ck);}
+for(var i=0;i<ids.length;i++){document.getElementById(ids[i]).addEventListener("input",ck);document.getElementById(ids[i]).addEventListener("change",ck);document.getElementById(ids[i]).addEventListener("paste",function(){setTimeout(ck,100);});}
+setInterval(ck,1000);
 
 function go(n){
 for(var i=1;i<=3;i++){
