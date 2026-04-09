@@ -77,7 +77,7 @@ body{font-family:-apple-system,system-ui,sans-serif;background:linear-gradient(1
 <li>Insuffisance du dossier de d&eacute;claration pr&eacute;alable</li>
 <li>Irr&eacute;gularit&eacute; de l&rsquo;affichage sur le terrain</li>
 </ol></div>
-<button class="btn bp" id="b1" disabled onclick="go(2)">Continuer &rarr;</button>
+<button class="btn bp" id="b1" onclick="if(v('nom')&&v('adr')&&v('cp')&&v('vil')){go(2)}else{alert('Veuillez remplir les champs obligatoires (Nom, Adresse, Code postal, Ville)');}">Continuer &rarr;</button>
 </div>
 
 <div class="sec" id="s2">
